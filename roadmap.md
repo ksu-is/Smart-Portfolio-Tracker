@@ -8,11 +8,11 @@
 - [x] Test yfinance integration
 
 ## Sprint 2 (Core Features)
-- [ ] Improve input validation (handle bad inputs)
-- [ ] Add error handling for missing stock data
-- [ ] Clean up output formatting
-- [ ] Add support for multiple stocks
-- [ ] Commit and push changes regularly
+- [x] Improve input validation (handle bad inputs)
+- [x] Add error handling for missing stock data
+- [x] Clean up output formatting
+- [x] Add support for multiple stocks
+- [x] Commit and push changes regularly
 
 ## Sprint 3 (Enhancements)
 - [ ] Store data (file or database)

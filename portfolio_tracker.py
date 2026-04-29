@@ -1,4 +1,5 @@
 import yfinance as yf
+import json
 
 portfolio = []
 
@@ -10,11 +11,19 @@ while True:
     if ticker == "DONE":
         break
 
-    shares = float(input("Enter number of shares: "))
-    buy_price = float(input("Enter purchase price: "))
+    try:
+        shares = float(input("Enter number of shares: "))
+        buy_price = float(input("Enter purchase price: "))
+    except ValueError:
+        print("Invalid input. Please enter numbers only.")
+        continue
 
-    stock = yf.Ticker(ticker)
-    info = stock.info
+    if shares <= 0 or buy_price <= 0:
+        print("Shares and purchase price must be greater than 0.")
+        continue
+
+    stock_data = yf.Ticker(ticker)
+    info = stock_data.info
     current_price = info.get("currentPrice")
 
     if current_price is None:
@@ -24,7 +33,7 @@ while True:
     total_cost = shares * buy_price
     current_value = shares * current_price
     profit_loss = current_value - total_cost
-    percent_change = (profit_loss / total_cost) * 100 if total_cost != 0 else 0
+    percent_change = (profit_loss / total_cost) * 100
 
     portfolio.append({
         "ticker": ticker,
@@ -62,8 +71,6 @@ print("\n=== Total Portfolio Results ===")
 print(f"Total Cost: ${portfolio_total_cost:.2f}")
 print(f"Total Current Value: ${portfolio_current_value:.2f}")
 print(f"Total Profit/Loss: ${portfolio_profit_loss:.2f}")
-
-import json
 
 with open("portfolio.json", "w") as f:
     json.dump(portfolio, f, indent=4)

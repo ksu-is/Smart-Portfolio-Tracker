@@ -15,8 +15,10 @@
 - [x] Commit and push changes regularly
 
 ## Sprint 3 (Enhancements)
-- [ ] Store data (file or database)
-- [ ] Add ability to save portfolio
-- [ ] Improve user experience
-- [ ] Add comments and documentation
+- [x] Store data in CSV file
+- [x] Improve user experience (messages, formatting)
+- [x] Add comments and documentation
+- [x] Save portfolio using JSON
+- [x] Improve formatting and error handling
+- [x] Support multiple stocks portfolio
 

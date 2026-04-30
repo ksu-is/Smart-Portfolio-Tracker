@@ -77,3 +77,6 @@ with open("portfolio.json", "w") as f:
 
 print("\nPortfolio saved to portfolio.json")
 
+print("Thank you for using the Stock Portfolio Tracker!")
+
+

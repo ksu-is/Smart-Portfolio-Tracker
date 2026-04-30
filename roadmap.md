@@ -18,7 +18,8 @@
 - [x] Store data in CSV file
 - [x] Improve user experience (messages, formatting)
 - [x] Add comments and documentation
-- [x] Save portfolio using JSON
+- [x] Save portfolio using JSON files
 - [x] Improve formatting and error handling
 - [x] Support multiple stocks portfolio
+
 
